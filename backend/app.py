@@ -11,6 +11,7 @@ CORS(app, origins=["https://jayethian-image-rb.netlify.app"])
 
 UPLOAD_FOLDER = tempfile.gettempdir()
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 @app.route('/upload', methods=['POST'])
 def remove_background():
@@ -41,7 +42,7 @@ def remove_background():
             f.write(output_image)
         
 
-        download_link = f"https://jayethian-bg-remover.onrender.com/download/{processed_filename}"
+        download_link = f"{os.environ.get("HOST_URL")}/download/{processed_filename}"
         
         return jsonify({
             "success" : True,
