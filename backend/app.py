@@ -6,7 +6,7 @@ import tempfile
 from rembg import remove
 
 app = Flask(__name__)
-CORS(app, origins=["https://jayethian-image-rb.netlify.app"])
+CORS(app, origins=["https://jayethian-image-rb.netlify.app", os.environ.get("API_ACCESS_URL")])
 
 
 UPLOAD_FOLDER = tempfile.gettempdir()
