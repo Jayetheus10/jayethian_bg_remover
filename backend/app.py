@@ -8,7 +8,7 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, origins=["https://jayethian_bg_remover.vercel.app"])
+CORS(app, origins=["https://jayethian-image-rb.netlify.app/"])
 
 
 UPLOAD_FOLDER = tempfile.gettempdir()
@@ -43,7 +43,7 @@ def remove_background():
             f.write(output_image)
         
 
-        download_link = f"https://jayethian_bg_remover.vercel.app/download/{processed_filename}"
+        download_link = f"https://jayethian-image-rb.netlify.app//download/{processed_filename}"
         
         return jsonify({
             "success" : True,
