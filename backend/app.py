@@ -8,7 +8,7 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, origins=["https://jayethian-image-rb.netlify.app/"])
+CORS(app, origins=["https://jayethian-image-rb.netlify.app"])
 
 
 UPLOAD_FOLDER = tempfile.gettempdir()
