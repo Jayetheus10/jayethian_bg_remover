@@ -23,7 +23,7 @@ export default function Form(){
         const formData = new FormData();
         formData.append('image', file);
         setLoading(true)
-        const fetchData = async () => {await fetch('jayethianbgremover-production.up.railway.app/upload', {
+        const fetchData = async () => {await fetch('https://jayethianbgremover-production.up.railway.app/upload', {
             method: 'POST',
             body: formData,
         })
@@ -42,6 +42,7 @@ export default function Form(){
         })
         .catch(error => {
             console.error('Error:', error);
+            alert("An error occurred while processing your request. Please try again later.");
         }).finally(() => {
             setLoading(false);
         })};
