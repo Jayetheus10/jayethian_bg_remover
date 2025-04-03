@@ -41,7 +41,7 @@ def remove_background():
             f.write(output_image)
         
 
-        download_link = f"https://jayethian-image-rb.netlify.app/download/{processed_filename}"
+        download_link = f"https://jayethian-bg-remover.onrender.com/download/{processed_filename}"
         
         return jsonify({
             "success" : True,
