@@ -22,7 +22,7 @@ export default function Form(){
         const formData = new FormData();
         formData.append('image', file);
         setLoading(true)
-        const fetchData = async () => {await fetch('https://jayethian-bg-remover.onrender.com/upload', {
+        const fetchData = async () => {await fetch('https://jayethian-bg-remover-kmlj.onrender.com/upload', {
             method: 'POST',
             body: formData,
         })
