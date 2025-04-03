@@ -4,8 +4,6 @@ import os
 from werkzeug.utils import secure_filename
 import tempfile
 from rembg import remove
-from PIL import Image
-import io
 
 app = Flask(__name__)
 CORS(app, origins=["https://jayethian-image-rb.netlify.app"])
@@ -43,7 +41,7 @@ def remove_background():
             f.write(output_image)
         
 
-        download_link = f"https://jayethian-image-rb.netlify.app//download/{processed_filename}"
+        download_link = f"https://jayethian-image-rb.netlify.app/download/{processed_filename}"
         
         return jsonify({
             "success" : True,
